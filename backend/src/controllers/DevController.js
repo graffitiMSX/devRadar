@@ -13,7 +13,7 @@ destroy => delete
 module.exports = {
     async index(request, response) {
         const devs = await Dev.find();
-        return response.json({ devs });
+        return response.json(devs);
     },
 
     async store(request, response) {
@@ -40,7 +40,7 @@ module.exports = {
             });
         }
 
-        return response.json({ dev });
+        return response.json(dev);
     },
 
     async update() {
